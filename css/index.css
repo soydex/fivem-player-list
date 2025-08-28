@@ -532,3 +532,10 @@ a {
     height: 300px;
     margin-bottom: 24px;
 }
+
+
+.table-ping{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
