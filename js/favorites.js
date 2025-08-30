@@ -237,10 +237,11 @@ export const renderFavoritePlayers = () => {
 	playerFavorites.forEach((player) => {
 		const isOnline = activePlayerKeys.has(player.key);
 		const tr = document.createElement('tr');
-		if (!isOnline) {
+		if (isOnline) {
+			tr.classList.add('player-online');
+		} else {
 			tr.classList.add('player-offline');
 		}
-		tr.classList.add('player-online');
 		tr.setAttribute('data-player-key', player.key);
 
 		const no = document.createElement('td');
